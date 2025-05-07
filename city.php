@@ -11,39 +11,61 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            background-color: #f5f7fa;
-        }
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #eef2f3, #8e9eab);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 20px;
+    }
 
-        .container {
-            margin-top: 30px;
-            max-width: 500px;
-        }
+    .container {
+        max-width: 500px;
+        width: 100%;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        position: relative;
+    }
 
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
+    .card {
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    
 
-        .back-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 20px;
-            color: #0d6efd;
-            text-decoration: none;
-        }
+    .back-btn {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #0d6efd;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+    }
 
-        .back-btn:hover {
-            text-decoration: underline;
-        }
+    .back-btn:hover {
+        background: #084ec1;
+    }
 
-        .results p {
-            margin-bottom: 5px;
-        }
-    </style>
+    .results p {
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: #333;
+    }
+</style>
 </head>
 <body>
 
