@@ -7,7 +7,7 @@ include 'db.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funky AQI Dashboard</title>
+    <title>AeroSync Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
@@ -126,7 +126,7 @@ include 'db.php';
 
 <div class="header">
     <span class="menu-toggle" onclick="toggleSidebar()">☰</span>
-    <h4>AQI Funk Monitor 🌈</h4>
+    <h4>AeroSync AQI Monitor</h4>
 </div>
 
 <div id="sidebar" class="sidebar">
