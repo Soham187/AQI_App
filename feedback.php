@@ -20,69 +20,64 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f5f7fa;
-        }
-
-        .container {
-            margin-top: 30px;
-        }
-
-        .feedback-form {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-
-        .btn-submit {
-            width: 100%;
-        }
-
-        .alert {
-            margin-top: 20px;
-        }
-
-        .btn-back {
-            width: 100%;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg,rgb(252, 252, 252),rgb(194, 194, 193));
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .feedback-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+    }
+    .feedback-card h4 {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #333;
+    }
+    .form-control {
+      border-radius: 10px;
+      resize: none;
+    }
+    .btn-submit {
+      background: linear-gradient(to right, #5e60ce, #7400b8);
+      border: none;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+    .btn-submit:hover {
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
+    }
+  </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="feedback-form">
-        <h3 class="text-center">Submit Your Feedback</h3>
-
-        <?php if (isset($success_message)): ?>
-            <div class="alert alert-success"><?= $success_message ?></div>
-        <?php endif; ?>
-
-        <?php if (isset($error_message)): ?>
-            <div class="alert alert-danger"><?= $error_message ?></div>
-        <?php endif; ?>
-
-        <form action="feedback.php" method="POST">
-            <div class="form-group">
-                <label for="feedback_text">Your Feedback</label>
-                <textarea id="feedback_text" name="feedback_text" rows="5" class="form-control" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-submit mt-3">Submit Feedback</button>
-        </form>
-
-        <a href="dashboard.php">
-            <button class="btn btn-secondary btn-back">Back to Dashboard</button>
-        </a>
-    </div>
-</div>
-
+  <div class="feedback-card">
+    <h4>We value your feedback!</h4>
+    <form action="submit_feedback.php" method="post">
+      <div class="mb-3">
+        <textarea class="form-control" name="feedback" rows="5" placeholder="Your feedback..." required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-submit">Submit</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
+
