@@ -9,41 +9,51 @@ session_start();
     <title>Search AQI by City</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #f0f2f5, #ffffff);
+    color: #333;
+    padding: 0;
+  }
 
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            background-color: #f5f7fa;
-        }
+  .container {
+    margin: 60px auto 30px auto;
+    max-width: 500px;
+    padding: 20px;
+    position: relative;
+  }
 
-        .container {
-            margin-top: 30px;
-            max-width: 500px;
-        }
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 30px;
+  }
 
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0d6efd;
+    text-decoration: none;
+    border: 1px solid #0d6efd;
+    padding: 6px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
 
-        .back-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 20px;
-            color: #0d6efd;
-            text-decoration: none;
-        }
+  .back-btn:hover {
+    background-color: #0d6efd;
+    color: white;
+  }
 
-        .back-btn:hover {
-            text-decoration: underline;
-        }
-
-        .results p {
-            margin-bottom: 5px;
-        }
-    </style>
+  .results p {
+    margin-bottom: 5px;
+  }
+</style>
 </head>
 <body>
 
